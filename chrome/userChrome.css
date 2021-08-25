@@ -28,7 +28,7 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 -moz-appearance: -moz-window-titlebar-maximized !important; And remove the padding-top 
 */	
 	:root[tabsintitlebar][sizemode="maximized"] #navigator-toolbox {
-		-moz-appearance: none !important;
+		/* -moz-appearance: none !important; */
 		padding-top: 8px !important;
 	}
 	#navigator-toolbox {
@@ -36,9 +36,9 @@ change (#navigator-toolbox) with your top bar (in this case #nav-bar) and use
 	}
 	
 /* Fix the FUllscreen changing padding on other bars. */	
-	:root[tabsintitlebar][sizemode="maximized"] #titlebar {
+	/* :root[tabsintitlebar][sizemode="maximized"] #titlebar {
 		-moz-appearance: none !important;
-	}
+	} */
 	
 /* Remove the main window top border */
 	#main-window:root[sizemode="normal"][tabsintitlebar]  {
@@ -525,11 +525,11 @@ visibility: collapse !important;
 	--tab-min-height: 0px !important;
 }
 
-.tabbrowser-tab:not([pinned="true"]) {                         /* min width of tabs */
+.tabbrowser-tab:not([pinned="true"]) {
 	min-width:160px !important;
 }
 .tabbrowser-tab[fadein] {
-	max-width: 100vw !important;                                   /* TABS, max width */
+	max-width: 100vw !important;
 }
 
 #identity-icon-box {
@@ -538,13 +538,6 @@ visibility: collapse !important;
 #identity-icon-box > label, .private-browsing-indicator {
 	display: none !important;
 }
-
-#main-window {
-	-moz-appearance: none !important;
-	background-color: rgba(255,255,255,0) !important;
-	background-image: none !important;
-}
-
 
 #TabsToolbar{
 	-moz-appearance: none !important;
@@ -557,3 +550,21 @@ visibility: collapse !important;
 	background-color: rgba(255,255,255,0) !important;
 	background-image: none !important;
 }
+
+#titlebar {
+	-moz-appearance: none !important;
+	background-color: rgba(255,255,255,0) !important;
+	background-image: none !important;
+}
+
+/* FOR BSPWM ONLY */
+
+/*
+
+#main-window {
+	-moz-appearance: none !important;
+	background-color: rgba(255,255,255,0) !important;
+	background-image: none !important;
+}
+
+*/
